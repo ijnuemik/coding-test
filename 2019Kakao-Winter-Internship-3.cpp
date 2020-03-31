@@ -7,6 +7,7 @@
 using namespace std;
 vector<string> user_id = { "frodo", "fradi", "crodo", "abc123", "frodoc" };
 vector<string> banned_id = { "fr*d*", "*rodo", "******", "******" };
+
 set<set<string>> s;
 bool check[100];
 
