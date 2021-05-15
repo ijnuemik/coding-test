@@ -11,7 +11,7 @@ int main() {
 	vector<int> vec1({ 0,1,2,3,4,4,5,6,7,8 });
 	vector<int> vec2({ 0,1,2,3,4,9 });
 
-	//ºÎºÐÁýÇÕ
+	//ï¿½Îºï¿½ï¿½ï¿½ï¿½ï¿½
 	if (includes(vec1.begin(), vec1.end(), vec2.begin(), vec2.end()))
 	{
 		cout << "vec1 include vec2" << endl;
@@ -20,35 +20,36 @@ int main() {
 		cout << "vec1 don't include vec2" << endl;
 	}
 
-	//ÇÕÁýÇÕ
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	vector<int> result;
-	result.resize(vec1.size() + vec2.size());//°ø°£È®º¸
-	auto itr = set_union(vec1.begin(), vec1.end(), vec2.begin(), vec2.end(), result.begin());//ÇÕÁýÇÕ
-	result.erase(itr, result.end());//³²Àº°ø°£ Á¦°Å
-	for_each(result.begin(), result.end(), [](int i) {cout << i << " "; });//Ãâ·Â
+	result.resize(vec1.size() + vec2.size());//ï¿½ï¿½ï¿½ï¿½È®ï¿½ï¿½
+	auto itr = set_union(vec1.begin(), vec1.end(), vec2.begin(), vec2.end(), result.begin());//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	result.erase(itr, result.end());//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	for_each(result.begin(), result.end(), [](int i) {cout << i << " "; });//ï¿½ï¿½ï¿½
 	cout << endl;
 
-	//±³ÁýÇÕ vec1 intersection vec2
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ vec1 intersection vec2
 	result.clear();
-	result.resize(vec1.size() + vec2.size());//°ø°£È®º¸
-	itr = set_intersection(vec1.begin(), vec1.end(), vec2.begin(), vec2.end(), result.begin());//±³ÁýÇÕ
-	result.erase(itr, result.end());//³²Àº°ø°£ Á¦°Å
-	for_each(result.begin(), result.end(), [](int i) {cout << i << " "; });//Ãâ·Â
+	result.resize(vec1.size() + vec2.size());//ï¿½ï¿½ï¿½ï¿½È®ï¿½ï¿½
+	itr = set_intersection(vec1.begin(), vec1.end(), vec2.begin(), vec2.end(), result.begin());//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	result.erase(itr, result.end());//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	for_each(result.begin(), result.end(), [](int i) {cout << i << " "; });//ï¿½ï¿½ï¿½
 	cout << endl;
 
-	//Â÷ÁýÇÕ vec1 - vec2
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ vec1 - vec2
 	result.clear();
-	result.resize(vec1.size() + vec2.size());//°ø°£È®º¸
-	itr = set_difference(vec1.begin(), vec1.end(), vec2.begin(), vec2.end(), result.begin());//Â÷ÁýÇÕ
-	result.erase(itr, result.end());//³²Àº°ø°£ Á¦°Å
-	for_each(result.begin(), result.end(), [](int i) {cout << i << " "; });//Ãâ·Â
+	result.resize(vec1.size() + vec2.size());//ï¿½ï¿½ï¿½ï¿½È®ï¿½ï¿½
+	itr = set_difference(vec1.begin(), vec1.end(), vec2.begin(), vec2.end(), result.begin());//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	result.erase(itr, result.end());//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	for_each(result.begin(), result.end(), [](int i) {cout << i << " "; });//ï¿½ï¿½ï¿½
 	cout << endl;
 
-	//´ëÄªÂ÷ÁýÇÕ vec1 EX_OR vec2
+	//ï¿½ï¿½Äªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ vec1 EX_OR vec2
 	result.clear();
-	result.resize(vec1.size() + vec2.size());//°ø°£È®º¸
-	itr = set_symmetric_difference(vec1.begin(), vec1.end(), vec2.begin(), vec2.end(), result.begin());//±³ÁýÇÕ
-	result.erase(itr, result.end());//³²Àº°ø°£ Á¦°Å
-	for_each(result.begin(), result.end(), [](int i) {cout << i << " "; });//Ãâ·Â
+	result.resize(vec1.size() + vec2.size());//ï¿½ï¿½ï¿½ï¿½È®ï¿½ï¿½
+	itr = set_symmetric_difference(vec1.begin(), vec1.end(), vec2.begin(), vec2.end(), result.begin());//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	result.erase(itr, result.end());//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	for_each(result.begin(), result.end(), [](int i) {cout << i << " "; });//ï¿½ï¿½ï¿½
 	cout << endl;
+	//test commit
 }
